@@ -496,8 +496,23 @@ footer::before {
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 330px; border-right: 0; border-bottom: 1px solid var(--line); }
   .process-grid { grid-template-columns: 1fr; gap: 45px; }
-  .results-grid { grid-template-columns: 1fr; }
-  .results-grid figure { height: 420px; }
+  .results-grid { 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: 20px; /* Space for scrollbar */
+    margin-right: -20px; /* Optional: stretch to edge if container has padding */
+    padding-right: 20px;
+  }
+  .results-grid figure { 
+    flex: 0 0 85%; 
+    scroll-snap-align: center; 
+    height: 420px; 
+  }
+  /* Hide scrollbar for a cleaner look */
+  .results-grid::-webkit-scrollbar { display: none; }
+  .results-grid { -ms-overflow-style: none; scrollbar-width: none; }
   .about-grid { grid-template-columns: 1fr; gap: 45px; }
   .about-photo { height: 490px; }
   .faq-head { margin-bottom: 35px; text-align: left; }
