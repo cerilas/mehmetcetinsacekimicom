@@ -498,7 +498,6 @@ footer::before {
   .process-grid { grid-template-columns: 1fr; gap: 45px; }
   .results-grid { grid-template-columns: 1fr; }
   .results-grid figure { height: 420px; }
-  .results-grid figure:not(:first-child) { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 45px; }
   .about-photo { height: 490px; }
   .faq-head { margin-bottom: 35px; text-align: left; }
